@@ -1,0 +1,20 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.body %></p>
+<br>
+<br>
+<%= link_to "Edit", edit_article_path%>
+<br>
+<%= link_to "Destroy", article_path(@article), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Legit??"
+                  } %>
+<br>
+<%= link_to "Home", articles_path %>
+<br>
+<br>
+<h2>Comments (<%= @article.comments.count %>) </h2>
+<%= render @article.comments %>
+<br>
+<br>
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
