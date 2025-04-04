@@ -13,8 +13,8 @@
 <br>
 <br>
 <h2>Comments (<%= @article.comments.count %>) </h2>
-<%= render @article.comments %>
+<%= render @article.comments, comment: @comment %>
 <br>
 <br>
 <h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+<%= render 'comments/form', article: @article, comment: @comment %>
