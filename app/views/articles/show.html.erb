@@ -2,12 +2,11 @@
 <p><%= @article.body %></p>
 <br>
 <br>
-<%= link_to "Edit", edit_article_path%>
+<%= link_to "Edit", edit_article_path(@article)%>
 <br>
-<%= link_to "Destroy", article_path(@article), data: {
-                    turbo_method: :delete,
+<%= link_to "Destroy", article_path(@article), method: :delete,  data: {
                     turbo_confirm: "Legit??"
-                  } %>
+                  }%>
 <br>
 <%= link_to "Home", articles_path %>
 <br>

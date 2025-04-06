@@ -1,11 +1,7 @@
 <p>
-  <% if @article.comments == false %>
-    <strong><%= comment.commenter %></strong>: <%= comment.body %>
-    <% if comment.persisted? %>
-      <%= link_to "Show", article_comment_path(@article, comment) %>
-      <%= link_to "Edit", edit_article_comment_path(@article, comment) %>
-    <% end %>
-  <% else %>
-    <h3>No comments yet</h3>
+  <strong><%= comment.commenter %></strong>: <%= comment.body %>
+  <% if comment.persisted? %>
+    <%= link_to "Show", article_comment_path(@article, comment) %>
+    <%= link_to "Edit", edit_article_comment_path(@article, comment) %>
   <% end %>
 </p>
