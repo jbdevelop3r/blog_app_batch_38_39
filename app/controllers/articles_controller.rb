@@ -5,7 +5,9 @@ class ArticlesController < ApplicationController
     @articles = Article.all.order(created_at: :asc)
   end
 
-  def show; end
+  def show
+    @comment = @article.comments.new
+  end
 
   def new
     @article = Article.new
