@@ -9,3 +9,5 @@
 <br>
 <br>
 <%= link_to "Create New Article", new_article_path, class: "text-danger" %>
+<br>
+<%= button_to("Signout", destroy_user_session_path, method: :delete) %>
